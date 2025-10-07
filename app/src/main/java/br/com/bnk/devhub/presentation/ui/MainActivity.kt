@@ -1,4 +1,4 @@
-package br.com.bnk.devhub
+package br.com.bnk.devhub.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,9 +19,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.bnk.devhub.R
 import br.com.bnk.devhub.ui.theme.DevHubTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,7 +40,9 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun MainScreen() {
-    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)) {
         Image(
             painter = painterResource(R.drawable.eu),
             contentDescription = "",
